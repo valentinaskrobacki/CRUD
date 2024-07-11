@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles de Película</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>{{ movie.title }}</h1>
+    <p><strong>Director:</strong> {{ movie.director }}</p>
+    <p><strong>Año:</strong> {{ movie.year }}</p>
+    <p><strong>Sinopsis:</strong> {{ movie.synopsis }}</p>
+    <a href="{{ url_for('edit_movie', movie_id=movie.id) }}">Editar</a>
+    <a href="{{ url_for('delete_movie', movie_id=movie.id) }}">Eliminar</a>
+</body>
+</html>
